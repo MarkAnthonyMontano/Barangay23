@@ -2613,7 +2613,7 @@ app.put("/api/admin/print-requests/:id", verifyToken, async (req, res) => {
           ? `Your Print Request of Document ${requestedDocument} Has Been Approved`
           : `Your Print Request of Document ${requestedDocument} Was Rejected`,
         status === "approved"
-          ? `Your request has been approved. Your ${requestedDocument} will be process within 2-3 business days.`
+          ? `Your request has been approved. Your ${requestedDocument} will be processed within 2–3 business days.`
           : `Sorry, your request for printing ${requestedDocument} was rejected.`
       );
     }
