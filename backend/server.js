@@ -1956,69 +1956,6 @@ app.delete('/api/services/:serviceID/beneficiaries/:beneficiaryID', async (req, 
 app.get('/', (req, res) => {
   res.send('Barangay System API running...');
 });
-// ===================== BARANGAY PROFILE =====================
-
-// GET /api/barangay-profile
-app.get('/api/barangay-profile', async (req, res) => {
-  try {
-    const rows = await query(
-      'SELECT id, barangay_name, municipality, province, place_issued FROM barangay_profile LIMIT 1'
-    );
-
-    if (rows.length === 0) {
-      // No record yet – send some defaults (optional)
-      return res.json(null);
-    }
-
-    res.json(rows[0]);
-  } catch (err) {
-    console.error('Error fetching barangay profile:', err);
-    res.status(500).json({ message: 'Error fetching barangay profile' });
-  }
-});
-
-// PUT /api/barangay-profile (protected, upsert)
-app.put('/api/barangay-profile', verifyToken, async (req, res) => {
-  try {
-    const { barangay_name, municipality, province, place_issued } = req.body;
-
-    if (!barangay_name || !municipality || !province) {
-      return res.status(400).json({
-        message: 'barangay_name, municipality, and province are required.',
-      });
-    }
-
-    const existing = await query(
-      'SELECT id FROM barangay_profile LIMIT 1'
-    );
-
-    if (existing.length > 0) {
-      const id = existing[0].id;
-      await query(
-        `UPDATE barangay_profile
-         SET barangay_name = ?, municipality = ?, province = ?, place_issued = ?
-         WHERE id = ?`,
-        [barangay_name, municipality, province, place_issued, id]
-      );
-    } else {
-      await query(
-        `INSERT INTO barangay_profile
-         (barangay_name, municipality, province, place_issued)
-         VALUES (?, ?, ?, ?)`,
-        [barangay_name, municipality, province, place_issued]
-      );
-    }
-
-    const rows = await query(
-      'SELECT id, barangay_name, municipality, province, place_issued FROM barangay_profile LIMIT 1'
-    );
-    res.json(rows[0]);
-  } catch (err) {
-    console.error('Error saving barangay profile:', err);
-    res.status(500).json({ message: 'Error saving barangay profile' });
-  }
-});
-
 
 // ===================== OFFICIALS =====================
 
@@ -2657,22 +2594,27 @@ app.put("/api/admin/print-requests/:id", verifyToken, async (req, res) => {
 
     // ✅ SAME CONNECTION
     const [rows] = await pool.query(
-      `SELECT u.username
+      `SELECT u.username, pr.request_type
        FROM print_requests pr
        JOIN users u ON pr.requested_by = u.id
        WHERE pr.id = ?`,
       [id]
     );
 
+    const requestedDocument = rows[0].request_type
+      .replace(/[^a-zA-Z0-9\s]/g, '')  
+      .toLowerCase() 
+      .replace(/\b\w/g, char => char.toUpperCase());
+
     if (rows.length) {
       await sendMail(
         rows[0].username,
         status === "approved"
-          ? "Your Print Request Has Been Approved"
-          : "Your Print Request Was Rejected",
+          ? `Your Print Request of Document ${requestedDocument} Has Been Approved`
+          : `Your Print Request of Document ${requestedDocument} Was Rejected`,
         status === "approved"
-          ? "Your request has been approved. Your ID will be processed within 2–3 business days."
-          : "Sorry, your request for printing Barangay ID was rejected."
+          ? `Your request has been approved. Your ${requestedDocument} will be process within 2-3 business days.`
+          : `Sorry, your request for printing ${requestedDocument} was rejected.`
       );
     }
 

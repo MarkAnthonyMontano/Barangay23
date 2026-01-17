@@ -1287,11 +1287,12 @@ const ResidentsPage = () => {
                   <TableCell sx={{ border: "2px solid black", textAlign: "center", color: "white", }} colSpan={2} align='center'>Contact In Case of Emergency</TableCell>
                   <TableCell sx={{ border: "2px solid black", textAlign: "center", color: "white", }} rowSpan={2} align='center'>Status</TableCell>
                   <TableCell sx={{ border: "2px solid black", textAlign: "center", color: "white", }} rowSpan={2} align="center">Actions</TableCell>
+                  <TableCell sx={{ border: "2px solid black", textAlign: "center", color: "white", }} rowSpan={2} align="center">Notify Resident</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell sx={{ border: "2px solid black", textAlign: "center", color: "white", }}>Full Name</TableCell>
                   <TableCell sx={{ border: "2px solid black", textAlign: "center", color: "white", }}>Contact Number</TableCell>
-                  <TableCell sx={{ border: "2px solid black", textAlign: "center", color: "white", }}>Notify Resident</TableCell>
+                  
                 </TableRow>
               </TableHead>
 

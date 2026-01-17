@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2026 at 06:39 AM
+-- Generation Time: Jan 17, 2026 at 08:59 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -232,21 +232,19 @@ INSERT INTO `audit` (`id`, `actor_id`, `actor_name`, `message`, `role`, `created
 (191, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Added a new event birthday ko in Event Page', 'SuperAdmin', '2026-01-12 04:01:57'),
 (192, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Deleted an event 9 in Event Page', 'SuperAdmin', '2026-01-12 04:03:22'),
 (193, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Added a new event gasg in Event Page', 'SuperAdmin', '2026-01-12 04:04:20'),
-(194, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Deleted an event gasg in Event Page', 'SuperAdmin', '2026-01-12 04:04:24');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `barangay_profile`
---
-
-CREATE TABLE `barangay_profile` (
-  `id` int(11) NOT NULL,
-  `barangay_name` varchar(150) NOT NULL,
-  `municipality` varchar(150) NOT NULL,
-  `province` varchar(150) NOT NULL,
-  `place_issued` varchar(150) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+(194, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Deleted an event gasg in Event Page', 'SuperAdmin', '2026-01-12 04:04:24'),
+(195, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Updated resident record in Residents Page', 'SuperAdmin', '2026-01-17 01:09:09'),
+(196, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Updated resident record in Residents Page', 'SuperAdmin', '2026-01-17 01:50:12'),
+(197, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Updated resident record in Residents Page', 'SuperAdmin', '2026-01-17 01:57:52'),
+(198, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Notified a resident to claim barangay ID', 'SuperAdmin', '2026-01-17 02:13:04'),
+(199, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Grant User Ramon M. Marcellana an access to dashboard,residents,households,incidents,services,certificates,adminsecuritysettings,residentidcard in Official Page', 'SuperAdmin', '2026-01-17 07:45:00'),
+(200, 7, 'Ramon M. Marcellana (montano.ma.bsinfotech@gmail.com)', 'User Ramon M. Marcellana (montano.ma.bsinfotech@gmail.com) Notified a resident to claim barangay ID', 'User', '2026-01-17 07:45:46'),
+(201, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Added a new resident record in Resident Page', 'SuperAdmin', '2026-01-17 07:51:21'),
+(202, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Updated resident record in Residents Page', 'SuperAdmin', '2026-01-17 07:53:48'),
+(203, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Notified a resident to claim barangay ID', 'SuperAdmin', '2026-01-17 07:54:03'),
+(204, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Exported a pdf file of a certificate/document in Certificate Page', 'SuperAdmin', '2026-01-17 07:55:00'),
+(205, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Exported a pdf file of a certificate/document in Certificate Page', 'SuperAdmin', '2026-01-17 07:55:39'),
+(206, 2, 'Fregilda P. Matabang (markmontano522@gmail.com)', 'User Fregilda P. Matabang (markmontano522@gmail.com) Exported a pdf file of a certificate/document in Certificate Page', 'SuperAdmin', '2026-01-17 07:56:04');
 
 -- --------------------------------------------------------
 
@@ -322,7 +320,10 @@ INSERT INTO `document_requested` (`id`, `resident_id`, `document_types`, `issued
 (11, 8, 'Certificate of Indigency For Legal Age', '2026-01-06', '1783296000'),
 (12, 8, 'Barangay Certification', '2026-01-06', '1783296000'),
 (13, 8, 'Barangay Certificate', '2026-01-06', '1783296000'),
-(14, 8, 'Business Permit', '2026-01-06', '1783296000');
+(14, 8, 'Business Permit', '2026-01-06', '1783296000'),
+(15, 7, 'Barangay Certificate of Residency', '2026-01-17', '1784246400'),
+(16, 7, 'Awknowledgement Receipt', '2026-01-17', '1784246400'),
+(17, 7, 'Barangay Certificate of Indigency', '2026-01-17', '1784246400');
 
 -- --------------------------------------------------------
 
@@ -1284,7 +1285,15 @@ INSERT INTO `page_access` (`id`, `page_key`, `page_label`, `official_id`) VALUES
 (327, 'officials', 'Officials', 3),
 (328, 'adminsecuritysettings', 'Settings', 3),
 (329, 'residentidcard', 'Resident ID Card', 3),
-(330, 'calendarpage', 'Calendar', 3);
+(330, 'calendarpage', 'Calendar', 3),
+(331, 'dashboard', 'Dashboard', 7),
+(332, 'residents', 'Residents', 7),
+(333, 'households', 'Households', 7),
+(334, 'incidents', 'Incidents', 7),
+(335, 'services', 'Services', 7),
+(336, 'certificates', 'Certificates', 7),
+(337, 'adminsecuritysettings', 'Settings', 7),
+(338, 'residentidcard', 'Resident ID Card', 7);
 
 -- --------------------------------------------------------
 
@@ -1317,7 +1326,34 @@ INSERT INTO `print_requests` (`id`, `resident_id`, `request_type`, `requested_by
 (24, 3, 'indigency_minor', 17, 'approved', '2025-12-29 04:11:36', '2025-12-29 12:12:35', '2026-01-05 12:12:35', NULL, NULL),
 (25, 1, 'barangay_id', 17, 'approved', '2025-12-29 04:24:26', '2025-12-29 12:25:00', '2026-01-05 12:25:00', NULL, NULL),
 (27, 2, 'barangay_id', 11, 'approved', '2026-01-05 07:46:04', '2026-01-05 15:46:30', '2026-01-12 15:46:30', NULL, NULL),
-(28, 19, 'barangay_id', 11, 'approved', '2026-01-12 03:47:16', '2026-01-12 11:47:24', '2026-01-15 11:47:24', NULL, NULL);
+(28, 19, 'barangay_id', 11, 'approved', '2026-01-12 03:47:16', '2026-01-12 11:47:24', '2026-01-15 11:47:24', NULL, NULL),
+(30, 2, 'barangay_id', 11, 'approved', '2026-01-17 03:10:38', '2026-01-17 11:10:49', '2026-01-20 11:10:49', NULL, NULL),
+(31, 21, 'barangay_id', 19, 'pending', '2026-01-17 07:51:39', NULL, NULL, NULL, NULL),
+(32, 19, 'barangay_id', 19, 'pending', '2026-01-17 07:57:04', NULL, NULL, NULL, NULL),
+(33, 3, 'barangay_id', 19, 'approved', '2026-01-17 07:57:14', '2026-01-17 15:57:22', '2026-01-20 15:57:22', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `receipt`
+--
+
+CREATE TABLE `receipt` (
+  `id` int(11) NOT NULL,
+  `receipt_from` varchar(255) NOT NULL,
+  `receipt_of` varchar(255) NOT NULL,
+  `amount` varchar(60) NOT NULL,
+  `purpose` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `receipt`
+--
+
+INSERT INTO `receipt` (`id`, `receipt_from`, `receipt_of`, `amount`, `purpose`, `date`) VALUES
+(2, '8', '', '200', 'loan', '2026-01-12'),
+(3, '7', '', '', 'employment', '2026-01-17');
 
 -- --------------------------------------------------------
 
@@ -1358,6 +1394,7 @@ CREATE TABLE `residents` (
   `suffix` varchar(20) DEFAULT NULL,
   `sex` enum('Male','Female','Other') DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
+  `email_address` varchar(255) DEFAULT NULL,
   `is_senior` int(1) NOT NULL DEFAULT 0,
   `birthdate` varchar(255) DEFAULT NULL,
   `civil_status` varchar(50) DEFAULT NULL,
@@ -1381,14 +1418,14 @@ CREATE TABLE `residents` (
 -- Dumping data for table `residents`
 --
 
-INSERT INTO `residents` (`id`, `resident_code`, `profile_picture`, `last_name`, `first_name`, `middle_name`, `suffix`, `sex`, `age`, `is_senior`, `birthdate`, `civil_status`, `work`, `monthly_income`, `contact_no`, `purok`, `address`, `is_voters`, `created_at`, `precint_no`, `fullname_emergency`, `contact_no_emergency`, `is_pwd`, `is_solo_parent`, `living`, `status`) VALUES
-(1, '2026-00002', NULL, 'San Jose', 'Dhani', 'Ignacio', 'null', 'Male', 43, 0, '1982-01-06', 'Single', '', 0, '09112345678', '', 'Blk 14 Lot 19', 0, '2025-11-13 03:28:13', '', '', '', 1, 1, '', 1),
-(2, '2026-00003', '/uploads/profile_pictures/1765711263002-formalpic.jpg', 'Montano', 'Mark Anthony', 'Placido', '', 'Male', 22, 0, '2003-06-26', 'Single', '', 0, '09948183681', 'Dona Yayang', '19 G Dona yayang Street Libis', 1, '2025-11-13 03:28:54', '4033A', 'Mario A. Montano', '09666287280', 0, 1, '', 0),
-(3, '2026-00004', '/uploads/profile_pictures/1766305161811-f2dbcf37-7231-4c55-8d65-0c5ffe4ee60f.jfif', 'Mecasio', 'Arden', 'Bandoja', 'Jr', 'Male', 65, 0, '1960-04-10', 'Single', 'Computer Shops', 2, '9079787', 'Bato', 'Lot1 Blk7 Salmon Alley, Mannunggal St. Brgy. Tatalon', 1, '2025-12-14 03:43:16', '4658A', 'Hello World', '20250001231', 0, 1, '', 1),
-(7, '2026-00005', 'null', 'Dela Cruz', 'Cedrick Llyod', 'P.', '', 'Male', 22, 0, '2003-01-10', 'Single', 'Computer Shops', 1, '9079787', 'ASD', 'Lot1 Blk7 Salmon Alley, Mannunggal St. Brgy. Tatalon', 1, '2025-12-21 08:20:49', '1213B', 'Arden Mecasio', '0962791313', 0, 1, '6 years', 1),
-(8, '2026-00006', '/uploads/profile_pictures/1766313632716-f2dbcf37-7231-4c55-8d65-0c5ffe4ee60f.jfif', 'Ciruela', 'Genny', 'D.', 'as', 'Female', 5, 1, '2020-12-26', 'Single', 'Parlor', 2, '8296183', 'DASDADAS', 'sadasdasd', 1, '2025-12-21 10:40:14', 'asdasd', 'asdas', '21312482681', 0, 1, '6 years', 0),
-(19, '2026-00001', NULL, 'Montano', 'Eunice', 'Placido', '', 'Female', 29, 0, '1996-06-17', 'Single', 'BPO ', 3, '09948183681', 'Dona Yayang', '19 G Dona yayang Street Libis', 1, '2026-01-03 10:01:31', '4033A', 'Mark Anthony Montano', '09666287280', 0, 1, '10 years', 1),
-(20, '2026-00007', NULL, 'Mecasio12', 'Arden12', 'Bandoja12', '', 'Male', 22, 0, '2003-05-10', 'Single', 'Computer Shops', 0, '9079787', 'yiuy', 'Manunggal St.', 0, '2026-01-08 12:02:35', '7645A', 'Arden Bandoja Mecasio', '78567456453', 0, 1, '1 years', 1);
+INSERT INTO `residents` (`id`, `resident_code`, `profile_picture`, `last_name`, `first_name`, `middle_name`, `suffix`, `sex`, `age`, `email_address`, `is_senior`, `birthdate`, `civil_status`, `work`, `monthly_income`, `contact_no`, `purok`, `address`, `is_voters`, `created_at`, `precint_no`, `fullname_emergency`, `contact_no_emergency`, `is_pwd`, `is_solo_parent`, `living`, `status`) VALUES
+(1, '2026-00002', NULL, 'San Jose', 'Dhani', 'Ignacio', '', 'Male', 43, NULL, 0, '1982-01-06', 'Single', '', 0, '09112345678', '', 'Blk 14 Lot 19', 0, '2025-11-13 03:28:13', '', '', '', 1, 1, '', 1),
+(2, '2026-00003', '/uploads/profile_pictures/1765711263002-formalpic.jpg', 'Montano', 'Mark Anthony', 'Placido', '', 'Male', 22, 'montano.ma.bsinfotech@gmail.com', 0, '2003-06-26', 'Single', '', 0, '09948183681', 'Dona Yayang', '19 G Dona yayang Street Libis', 1, '2025-11-13 03:28:54', '4033A', 'Mario A. Montano', '09666287280', 0, 1, '', 0),
+(3, '2026-00004', '/uploads/profile_pictures/1766305161811-f2dbcf37-7231-4c55-8d65-0c5ffe4ee60f.jfif', 'Mecasio', 'Arden', 'Bandoja', 'Jr', 'Male', 65, NULL, 0, '1960-04-10', 'Single', 'Computer Shops', 2, '9079787', 'Bato', 'Lot1 Blk7 Salmon Alley, Mannunggal St. Brgy. Tatalon', 1, '2025-12-14 03:43:16', '4658A', 'Hello World', '20250001231', 0, 1, '', 1),
+(7, '2026-00005', 'null', 'Dela Cruz', 'Cedrick Llyod', 'P.', '', 'Male', 22, NULL, 0, '2003-01-10', 'Single', 'Computer Shops', 1, '9079787', 'ASD', 'Lot1 Blk7 Salmon Alley, Mannunggal St. Brgy. Tatalon', 1, '2025-12-21 08:20:49', '1213B', 'Arden Mecasio', '0962791313', 0, 1, '6 years', 1),
+(8, '2026-00006', '/uploads/profile_pictures/1766313632716-f2dbcf37-7231-4c55-8d65-0c5ffe4ee60f.jfif', 'Ciruela', 'Genny', 'D.', 'as', 'Female', 5, '', 1, '2020-12-26', 'Single', 'Parlor', 2, '8296183', 'DASDADAS', 'sadasdasd', 1, '2025-12-21 10:40:14', 'asdasd', 'asdas', '21312482681', 0, 1, '6 years', 0),
+(19, '2026-00001', NULL, 'Montano', 'Eunice', 'Placido', '', 'Female', 29, NULL, 0, '1996-06-17', 'Single', 'BPO ', 3, '09948183681', 'Dona Yayang', '19 G Dona yayang Street Libis', 1, '2026-01-03 10:01:31', '4033A', 'Mark Anthony Montano', '09666287280', 0, 1, '10 years', 1),
+(20, '2026-00007', NULL, 'Mecasio12', 'Arden12', 'Bandoja12', '', 'Male', 22, NULL, 0, '2003-05-10', 'Single', 'Computer Shops', 0, '9079787', 'yiuy', 'Manunggal St.', 0, '2026-01-08 12:02:35', '7645A', 'Arden Bandoja Mecasio', '78567456453', 0, 1, '1 years', 1);
 
 -- --------------------------------------------------------
 
@@ -1406,7 +1443,7 @@ CREATE TABLE `resident_sequences` (
 --
 
 INSERT INTO `resident_sequences` (`year`, `last_number`) VALUES
-(2026, 7);
+(2026, 8);
 
 -- --------------------------------------------------------
 
@@ -1489,10 +1526,10 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `official_id`, `profile_image`, `username`, `password_hash`, `full_name`, `role`, `created_at`, `require_otp`) VALUES
 (9, 12, NULL, '4rdenmecasi0@gmail.com', '$2b$10$qb8ULyvxbdk31tiQb7ohYuw2XvRSeglc1amH8NbST/W2r/aofRwqa', 'Jessica C. Morit', 'User', '2025-12-21 12:18:44', 1),
 (10, 8, NULL, 'angelitovelasco@gmail.com', '$2b$10$ZaWU8uEz3EXv9zjuzj20ael0.LJ120k0JWfMiIe40OG79N5i3mqma', 'Angelito P. Velasco', 'Admin', '2025-12-21 12:21:05', 0),
-(11, 3, NULL, 'markmontano999@gmail.com', '$2b$10$zFGTApAt3yQ8QPYMbH6jPOYvzTaKHqUCewM80gyEojRlVbUcpLCsa', 'Richard U. Benitez', 'User', '2025-12-24 16:27:23', 0),
 (16, 2, '/uploads/profile_pictures/1766910247743-sisec.jpg', 'markmontano522@gmail.com', '$2b$10$MYqL6T2twCaEGjh2t.MGuuThyK6.EFN/PpBhUVSF/cykkk7ZAUFJe', 'Fregilda P. Matabang', 'SuperAdmin', '2025-12-28 08:02:12', 0),
 (17, 4, NULL, 'romulaenrica@gmail.com', '$2b$10$rrhPE7sCr47PB4dekgilZOi25/BryKQp8vjoJKXGLdZej6FJuyMzi', 'Romulo O. Enrica', 'User', '2025-12-29 03:51:14', 0),
-(18, 1, NULL, 'manolitocallanta@gmail.com', '$2b$10$CSMR4OcwVRhOsvLxpEV5leL56NhdJ2WsdXGOSsCeHR6l2SwxZ62ES', 'Engr. Manolito R. Callanta', 'Admin', '2025-12-29 03:59:05', 0);
+(18, 1, NULL, 'manolitocallanta@gmail.com', '$2b$10$CSMR4OcwVRhOsvLxpEV5leL56NhdJ2WsdXGOSsCeHR6l2SwxZ62ES', 'Engr. Manolito R. Callanta', 'Admin', '2025-12-29 03:59:05', 0),
+(19, 7, NULL, 'montano.ma.bsinfotech@gmail.com', '$2b$10$IBBeWGdPme5M7yVkXFu2NeQURhLipEZbivd.tCD2pZc0xeAbnnUGG', 'Ramon M. Marcellana', 'User', '2026-01-17 07:45:00', 0);
 
 --
 -- Indexes for dumped tables
@@ -1502,12 +1539,6 @@ INSERT INTO `users` (`id`, `official_id`, `profile_image`, `username`, `password
 -- Indexes for table `audit`
 --
 ALTER TABLE `audit`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `barangay_profile`
---
-ALTER TABLE `barangay_profile`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1583,6 +1614,12 @@ ALTER TABLE `print_requests`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `receipt`
+--
+ALTER TABLE `receipt`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `request_id_table`
 --
 ALTER TABLE `request_id_table`
@@ -1630,13 +1667,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `audit`
 --
 ALTER TABLE `audit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=195;
-
---
--- AUTO_INCREMENT for table `barangay_profile`
---
-ALTER TABLE `barangay_profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
 
 --
 -- AUTO_INCREMENT for table `certificate_templates`
@@ -1654,7 +1685,7 @@ ALTER TABLE `company_settings`
 -- AUTO_INCREMENT for table `document_requested`
 --
 ALTER TABLE `document_requested`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -1696,13 +1727,19 @@ ALTER TABLE `officials`
 -- AUTO_INCREMENT for table `page_access`
 --
 ALTER TABLE `page_access`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=331;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=339;
 
 --
 -- AUTO_INCREMENT for table `print_requests`
 --
 ALTER TABLE `print_requests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `receipt`
+--
+ALTER TABLE `receipt`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `request_id_table`
@@ -1714,7 +1751,7 @@ ALTER TABLE `request_id_table`
 -- AUTO_INCREMENT for table `residents`
 --
 ALTER TABLE `residents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -1732,7 +1769,7 @@ ALTER TABLE `service_beneficiaries`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables
@@ -1755,8 +1792,8 @@ ALTER TABLE `household_members`
 -- Constraints for table `incidents`
 --
 ALTER TABLE `incidents`
-  ADD CONSTRAINT `incidents_ibfk_1` FOREIGN KEY (`complainant_id`) REFERENCES `residents` (`id`),
-  ADD CONSTRAINT `incidents_ibfk_2` FOREIGN KEY (`respondent_id`) REFERENCES `residents` (`id`);
+  ADD CONSTRAINT `incidents_ibfk_1` FOREIGN KEY (`complainant_id`) REFERENCES `residents` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `incidents_ibfk_2` FOREIGN KEY (`respondent_id`) REFERENCES `residents` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `service_beneficiaries`
