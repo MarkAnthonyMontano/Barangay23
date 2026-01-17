@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Barangay369.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barangay 369</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url("/default-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* 🔥 Startup Loader */
+      #startup-loader {
+        position: fixed;
+        inset: 0;
+        background-color: #fff9ec;
+        backdrop-filter: blur(6px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .loader-wrapper {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Loading Circle - Thicker & Black */
+      .loader-circle {
+        width: 160px;
+        height: 160px;
+        border: 12px solid rgba(0, 0, 0, 0.3); /* thicker and lighter */
+        border-top-color: #000000; /* black */
+        border-radius: 50%;
+        animation: spin 0.9s linear infinite;
+      }
+
+      /* Logo inside Loader */
+      .loader-logo {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* black glow */
+        animation: heartbeat 1.5s ease-in-out infinite;
+      }
+
+      /* Loading Text */
+      .loader-text {
+        margin-top: 22px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #000000; /* black text */
+        animation: pulse 1.3s infinite;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes heartbeat {
+        0%, 50%, 100% { transform: scale(1); }
+        25%, 75% { transform: scale(1.12); }
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DEC_5EBP.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CYZLjOA-.css">
+  </head>
+  <body>
+    <!-- 🔥 Startup Loader -->
+    <div id="startup-loader">
+      <div class="loader-wrapper">
+        <div class="loader-circle"></div>
+        <img src="/Barangay369.png" class="loader-logo" />
+      </div>
+      <div class="loader-text">Loading...</div>
+    </div>
+
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <script>
+      // Remove loader after React app is ready
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('startup-loader');
+        if(loader){
+          loader.style.opacity = '0';
+          loader.style.transition = 'opacity 0.5s ease';
+          setTimeout(() => loader.remove(), 500);
+        }
+      });
+    </script>
+  </body>
+</html>
